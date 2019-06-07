@@ -39,3 +39,17 @@ def initial_round
   return total
 end
 
+def hit?(total)
+  prompt_user
+  user_input = get_user_input
+  if user_input == 'h'
+    card = deal_card
+    total = card + total
+    display_card_total(total)
+    return total
+  elsif user_input == 's'
+    return total
+  else
+    invalid_command
+  end
+end
