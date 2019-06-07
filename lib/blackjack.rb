@@ -53,3 +53,22 @@ def hit?(total)
     invalid_command
   end
 end
+
+def invalid_command
+  # code invalid_command here
+  puts "Please enter a valid command"
+end
+
+#####################################################
+# get every test to pass before coding runner below #
+#####################################################
+
+def runner
+  # code runner here
+  welcome
+  total = initial_round
+  until total > 21
+    total = hit?(total)
+  end
+  end_game(total)
+end
